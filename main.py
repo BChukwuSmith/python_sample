@@ -25,8 +25,53 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World! <br/> Chioma is the best! <br/> Hi Bapu! <br/> Yaya\'s garden is so nice! <br/> Great, Yaya is so nice! <br/><br/> who is nicer than yaya?<br/><br/> yaya grden is so nice!'
+    return 'Hello World! <br/> Chioma is the best! <br/> Hi Bapu! <br/> Yaya\'s garden is so nice! <br/> Great, Yaya is so nice! <br/><br/> who is nicer than yaya?<br/><br/> yaya grden is so nice!<br/><br/> Hi Brian and Samuel! I added a .py file below <br/><br/> I hope it works!'
 
+# Bapu added this program.
+# He also added this comment -- the delay loop is very sensitive to where the return statement is place relative to the nested loops. To change delay change number of interations of loops
+namestring="SamuelChukwuSmith"
+def delay():
+    for j in range (20000):
+        q= 434345. / 4.555
+        for k in range (2000):
+            junk =3.666577545 /4.66666456
+            for n in range (2000):
+                p = 665432.234 / 4.777
+        return junk
+for i in range (6):
+    modstring = namestring
+    print("*" + modstring + "*")
+    wait = delay()
+    modstring = namestring[1:16]
+    print(" *" + modstring + "*")
+    wait = delay()
+    modstring = namestring[2:15]
+    print("  *" + modstring + "*")
+    wait = delay()
+    modstring = namestring[3:12]
+    print("    *" + modstring + "*")
+    wait = delay()
+    modstring = namestring[5:10]
+    print("      *" + modstring + "*")
+    wait = delay()
+    modstring = namestring[7:8]
+    print("         **")
+    wait = delay()
+    modstring = namestring[5:10]
+    print("      *" + modstring + "*")
+    wait = delay()
+    modstring = namestring[3:12]
+    print("    *" + modstring + "*")
+    wait = delay()
+    modstring = namestring[2:15]
+    print("  *" + modstring + "*")
+    wait = delay()
+    modstring = namestring[1:16]
+    print(" *" + modstring + "*")
+    wait = delay()
+    modstring = namestring
+    print("*" + modstring + "*")
+    wait = delay()
 
 
 
