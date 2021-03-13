@@ -25,7 +25,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World! <br/> Chioma is the best! <br/> Hi Bapu! <br/> Yaya\'s garden is so nice! <br/> Great, Yaya is so nice! <br/><br/> who is nicer than yaya?<br/><br/> yaya grden is so nice!<br/><br/> Hi Brian and Samuel! I added a .py file below <br/><br/> I hope it works!<br/><br/> i love yaya bapu'
+    return 'Hello World! <br/> Chioma is the best! <br/> Hi Bapu! <br/> Yaya\'s garden is so nice! <br/> Great, Yaya is so nice! <br/><br/> who is nicer than yaya?<br/><br/> yaya grden is so nice!<br/><br/> Hi Brian and Samuel! I added a .py file below <br/><br/> I hope it works!<br/><br/> i love yaya bapu<br/><br/> my name is samuel i love yaya and bapu'
 
 # Bapu added this program.
 # He also added this comment -- the delay loop is very sensitive to where the return statement is place relative to the nested loops. To change delay change number of interations of loops
