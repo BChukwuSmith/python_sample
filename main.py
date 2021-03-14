@@ -35,12 +35,12 @@ def hello():
     I hope it works!<br/><br/> \
     i love yaya bapu<br/><br/> \
     my name is samuel i love yaya and bapu\
-    <form action="/" method="post">\
-    Name:<br /> \
-    <input type="text" name = "Name"><br /> \
-    Quest:<br /> \
-    <input type="text" name="Quest"><br /> \
-    <input type="submit" value="submit"> \
+    <form action="/" methods=["GET","post">\
+        Name:<br /> \
+        <input type="text" name = "Name"><br /> \
+        Quest:<br /> \
+        <input type="text" name="Quest"><br /> \
+        <input type="submit" value="submit"> \
     </form> \
     {% if Quest is not none %} \
         {{ challenge }} \
@@ -52,6 +52,7 @@ def hello():
 def welcome(name):
     return 'Welcome sir ' + name
 
+@app.route('/Quest')
 def challenge():
     return 'You seek the Grail?!'
 
