@@ -59,15 +59,15 @@ def index():
         oreos = request.form["oreos"]
         success = process(doritos, oreos)
 
-        return render_template("index.html", fooResponse="Successful" if success else "Failed")
+        return render_template("index.html", "Successful" if success else "Failed")
 
      elif request.form["submit"] == "pita":
         success = process("pita")
-        return render_template("index.html", cooResponse="Successful" if success else "Failed")
+        return render_template("index.html", "Successful" if success else "Failed")
 
      elif request.form["submit"] == "chip":
         success = process("chip")
-        return render_template("index.html", cooResponse="Successful" if success else "Failed")
+        return render_template("index.html", "Successful" if success else "Failed")
 
 
 # Sample code on templates
