@@ -24,6 +24,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    if request.form["submit"] == "submit":
+        name = request.form['name']
+        quest = request.form['quest']
+        success = process(name, quest)
+        return render_template(hello.html, "Successful" if success else "Failed")
+
     """Return a friendly HTTP greeting."""
     return 'Hello World! <br/> Chioma is the best! <br/> \
     Hi Bapu! <br/> \
@@ -43,14 +49,16 @@ def hello():
         <input type="submit" value="submit"> \
     </form>'
 
-@app.route('/index')
-def index():
-    # if request.method == "GET":
-    if request.form["submit"] == "submit":
-        name = request.form['name']
-        quest = request.form['quest']
-        success = process(doritos, oreos)
-        return render_template(index.html, "Successful" if success else "Failed")
+# @app.route('/index')
+# def index():
+#     # if request.method == "GET":
+#     if request.form["submit"] == "submit":
+#         name = request.form['name']
+#         quest = request.form['quest']
+#         success = process(doritos, oreos)
+#         return render_template(index.html, "Successful" if success else "Failed")
+
+
     # {% if Quest is not none %} \
     #     {{ challenge }} \
     # { % endif %} \
