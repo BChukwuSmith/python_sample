@@ -39,7 +39,7 @@ def hello():
         Name:<br /> \
         <input type="text" name = "Name"><br /> \
         Quest:<br /> \
-        <input type="text" name="Quest"><br /> \
+        <input type="text" quest="Quest"><br /> \
         <input type="submit" value="submit"> \
     </form>'
 
@@ -47,7 +47,9 @@ def hello():
 def index():
     # if request.method == "GET":
     if request.form["submit"] == "submit":
-        return render_template(index.html)
+        name = request.form['name']
+        quest = request.form['quest']
+        return render_template(index.html, "Successful" if success else "Failed")
     # {% if Quest is not none %} \
     #     {{ challenge }} \
     # { % endif %} \
