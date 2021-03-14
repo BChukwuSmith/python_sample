@@ -49,6 +49,7 @@ def index():
     if request.form["submit"] == "submit":
         name = request.form['name']
         quest = request.form['quest']
+        success = process(doritos, oreos)
         return render_template(index.html, "Successful" if success else "Failed")
     # {% if Quest is not none %} \
     #     {{ challenge }} \
