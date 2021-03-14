@@ -34,7 +34,13 @@ def hello():
     Hi Brian and Samuel! I added a .py file below <br/><br/> \
     I hope it works!<br/><br/> \
     i love yaya bapu<br/><br/> \
-    my name is samuel i love yaya and bapu'
+    my name is samuel i love yaya and bapu\
+    <form action="/" method="post">\
+    CHIPS:<br /> \
+    <input type="text" name = "doritos"><br /> \
+    SNACKS:<br /> \
+    <input type="text" name="oreos"><br /> \
+    </form>'
 
 # Bapu added this program.
 # He also added this comment -- the delay loop is very sensitive to where the return statement is place relative to the nested loops. To change delay change number of interations of loops
