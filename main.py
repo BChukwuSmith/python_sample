@@ -49,6 +49,54 @@ def hello():
         {{ welcome }} \
     { % endif %}'
 
+@app.route('/index', methods=['GET', 'POST'])
+def index():
+    if request.method == "GET":
+        return render_template("index.html")
+
+    if request.form["submit"] == "submit":
+        doritos = request.form["doritos"]
+        oreos = request.form["oreos"]
+        success = process(doritos, oreos)
+
+        return render_template("index.html", fooResponse="Successful" if success else "Failed")
+
+     elif request.form["submit"] == "pita":
+        success = process("pita")
+        return render_template("index.html", cooResponse="Successful" if success else "Failed")
+
+     elif request.form["submit"] == "chip":
+        success = process("chip")
+        return render_template("index.html", cooResponse="Successful" if success else "Failed")
+
+
+# Sample code on templates
+# @app.route('/')
+# def index():
+#     return render_template(
+#         'weather.html',
+#         data=[{'name':'Toronto'}, {'name':'Montreal'}, {'name':'Calgary'},
+#               {'name':'Ottawa'}, {'name':'Edmonton'}, {'name':'Mississauga'},
+#               {'name':'Winnipeg'}, {'name':'Vancouver'}, {'name':'Brampton'},
+#               {'name':'Quebec'}])
+#
+# @app.route("/result" , methods=['GET', 'POST'])
+# def result():
+#     data = []
+#     error = None
+#     select = request.form.get('comp_select')
+#     resp = query_api(select)
+#     pp(resp)
+#     if resp:
+#         data.append(resp)
+#         if len(data) != 2:
+#             error = 'Bad Response from Weather API'
+#             return render_template(
+#                 'result.html',
+#                 data=data,
+#                 error=error)
+
+
 def welcome(name):
     return 'Welcome sir ' + name
 
