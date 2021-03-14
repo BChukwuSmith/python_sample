@@ -45,7 +45,8 @@ def hello():
 
 @app.route('/index')
 def index():
-    if request.method == "GET":
+    # if request.method == "GET":
+    if request.form["submit"] == "submit":
         return render_template(index.html)
     # {% if Quest is not none %} \
     #     {{ challenge }} \
