@@ -44,9 +44,12 @@ def hello():
     {% if Quest is not none %} \
         {{ challenge }} \
     { % endif %} \
+    {% if Name is not none %} \
+        {{ welcome }} \
+    { % endif %}'
 
 def welcome(name):
-    'Welcome sir ' + 'name'
+    'Welcome sir ' + name
 
 def challenge():
     return
