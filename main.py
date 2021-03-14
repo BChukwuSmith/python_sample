@@ -49,25 +49,26 @@ def hello():
         {{ welcome }} \
     { % endif %}'
 
-@app.route('/index', methods=['GET', 'POST'])
-def index():
-    if request.method == "GET":
-        return render_template("index.html")
-
-    if request.form["submit"] == "submit":
-        doritos = request.form["doritos"]
-        oreos = request.form["oreos"]
-        success = process(doritos, oreos)
-
-        return render_template("index.html", "Successful" if success else "Failed")
-
-     elif request.form["submit"] == "pita":
-        success = process("pita")
-        return render_template("index.html", "Successful" if success else "Failed")
-
-     elif request.form["submit"] == "chip":
-        success = process("chip")
-        return render_template("index.html", "Successful" if success else "Failed")
+# Sample code
+# @app.route('/index', methods=['GET', 'POST'])
+# def index():
+#     if request.method == "GET":
+#         return render_template("index.html")
+#
+#     if request.form["submit"] == "submit":
+#         doritos = request.form["doritos"]
+#         oreos = request.form["oreos"]
+#         success = process(doritos, oreos)
+#
+#         return render_template("index.html", "Successful" if success else "Failed")
+#
+#      elif request.form["submit"] == "pita":
+#         success = process("pita")
+#         return render_template("index.html", "Successful" if success else "Failed")
+#
+#      elif request.form["submit"] == "chip":
+#         success = process("chip")
+#         return render_template("index.html", "Successful" if success else "Failed")
 
 
 # Sample code on templates
