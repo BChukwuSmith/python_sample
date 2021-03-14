@@ -23,31 +23,31 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/index')
-def index():
-    if request.form["submit"] == "submit":
-        name = request.form['name']
-        quest = request.form['quest']
-        success = process(name, quest)
-    return render_template(index.html, "Successful" if success else "Failed")
+#@app.route('/index')
+def hello():
+    # if request.form["submit"] == "submit":
+    #     name = request.form['name']
+    #     quest = request.form['quest']
+    #     success = process(name, quest)
+    # return render_template(index.html, "Successful" if success else "Failed")
     """Return a friendly HTTP greeting."""
-    # return 'Hello World! <br/> Chioma is the best! <br/> \
-    # Hi Bapu! <br/> \
-    # Yaya\'s garden is so nice! <br/> \
-    # Great, Yaya is so nice! <br/><br/> \
-    # who is nicer than yaya?<br/><br/> yaya grden \
-    # is so nice!<br/><br/> \
-    # Hi Brian and Samuel! I added a .py file below <br/><br/> \
-    # I hope it works!<br/><br/> \
-    # i love yaya bapu<br/><br/> \
-    # my name is samuel i love yaya and bapu\
-    # <form action="/" methods=["GET","post">\
-    #     Name:<br /> \
-    #     <input type="text" name = "Name"><br /> \
-    #     Quest:<br /> \
-    #     <input type="text" quest="Quest"><br /> \
-    #     <input type="submit" value="submit"> \
-    # </form>'
+    return 'Hello World! <br/> Chioma is the best! <br/> \
+    Hi Bapu! <br/> \
+    Yaya\'s garden is so nice! <br/> \
+    Great, Yaya is so nice! <br/><br/> \
+    who is nicer than yaya?<br/><br/> yaya grden \
+    is so nice!<br/><br/> \
+    Hi Brian and Samuel! I added a .py file below <br/><br/> \
+    I hope it works!<br/><br/> \
+    i love yaya bapu<br/><br/> \
+    my name is samuel i love yaya and bapu\
+    <form action="/" methods=["GET","post">\
+        Name:<br /> \
+        <input type="text" name = "Name"><br /> \
+        Quest:<br /> \
+        <input type="text" quest="Quest"><br /> \
+        <input type="submit" value="submit"> \
+    </form>'
 
 # @app.route('/index')
 # def index():
