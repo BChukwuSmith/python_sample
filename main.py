@@ -23,6 +23,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
+@app.route('/index')
 def hello():
     """Return a friendly HTTP greeting."""
     return 'Hello World! <br/> Chioma is the best! <br/> \
