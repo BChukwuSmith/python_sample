@@ -42,13 +42,16 @@ def hello():
         Quest:<br /> \
         <input type="text" name="Quest"><br /> \
         <input type="submit" value="submit"> \
-    </form> \
-    {% if Quest is not none %} \
-        {{ challenge }} \
-    { % endif %} \
-    {% if Name is not none %} \
-        {{ welcome }} \
-    { % endif %}'
+    </form> \'
+
+if request.method == "GET":
+    return render_template(index.html)
+    # {% if Quest is not none %} \
+    #     {{ challenge }} \
+    # { % endif %} \
+    # {% if Name is not none %} \
+    #     {{ welcome }} \
+    # { % endif %}'
 
 # Sample code
 # @app.route('/index', methods=['GET', 'POST'])
