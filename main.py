@@ -23,7 +23,6 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/index')
 def hello():
     """Return a friendly HTTP greeting."""
     return 'Hello World! <br/> Chioma is the best! <br/> \
@@ -42,10 +41,12 @@ def hello():
         Quest:<br /> \
         <input type="text" name="Quest"><br /> \
         <input type="submit" value="submit"> \
-    </form> \'
+    </form>'
 
-if request.method == "GET":
-    return render_template(index.html)
+@app.route('/index')
+def index():
+    if request.method == "GET":
+        return render_template(index.html)
     # {% if Quest is not none %} \
     #     {{ challenge }} \
     # { % endif %} \
