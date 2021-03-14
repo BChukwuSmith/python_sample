@@ -36,10 +36,13 @@ def hello():
     i love yaya bapu<br/><br/> \
     my name is samuel i love yaya and bapu\
     <form action="/" method="post">\
-    CHIPS:<br /> \
-    <input type="text" name = "doritos"><br /> \
-    SNACKS:<br /> \
-    <input type="text" name="oreos"><br /> \
+    Name:<br /> \
+    <input type="text" name = "Name"><br /> \
+    Quest:<br /> \
+    <input type="text" name="Quest"><br /> \
+    {% if Quest is not none %} \
+        You seek the Grail?! \
+    { % endif %} \
     </form>'
 
 # Bapu added this program.
