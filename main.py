@@ -40,10 +40,17 @@ def hello():
     <input type="text" name = "Name"><br /> \
     Quest:<br /> \
     <input type="text" name="Quest"><br /> \
+    </form> \
     {% if Quest is not none %} \
-        You seek the Grail?! \
+        {{ challenge }} \
     { % endif %} \
-    </form>'
+
+def welcome(name):
+    'Welcome sir ' + 'name'
+
+def challenge():
+    return
+    'You seek the Grail?!'
 
 # Bapu added this program.
 # He also added this comment -- the delay loop is very sensitive to where the return statement is place relative to the nested loops. To change delay change number of interations of loops
