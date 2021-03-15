@@ -21,9 +21,9 @@ from flask import Flask, request,render_template
 # called `app` in `main.py`.
 app = Flask(__name__)
 
-#@app.route('/index')
 @app.route('/')
-def hello():
+@app.route('/index')
+def index():
     return 'test' ## render_template('index.html')
     # return render_template(index.html, "Successful" if success else "Failed")
     # if request.form["submit"] == "submit":
