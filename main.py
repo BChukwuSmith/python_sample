@@ -21,15 +21,15 @@ from flask import Flask
 # called `app` in `main.py`.
 app = Flask(__name__)
 
-
-@app.route('/')
 #@app.route('/index')
-def hello():
+@app.route('/')
+def index():
+    return render_template(index.html, "Successful" if success else "Failed")
     # if request.form["submit"] == "submit":
     #     name = request.form['name']
     #     quest = request.form['quest']
     #     success = process(name, quest)
-    return render_template(index.html, "Successful" if success else "Failed")
+    # return render_template(index.html, "Successful" if success else "Failed")
     """Return a friendly HTTP greeting."""
     # return 'Hello World! <br/> Chioma is the best! <br/> \
     # Hi Bapu! <br/> \
@@ -115,12 +115,12 @@ def hello():
 #                 error=error)
 
 
-def welcome(name):
-    return 'Welcome sir ' + name
-
-@app.route('/Quest')
-def challenge():
-    return 'You seek the Grail?!'
+# def welcome(name):
+#     return 'Welcome sir ' + name
+#
+# @app.route('/Quest')
+# def challenge():
+#     return 'You seek the Grail?!'
 
 # Bapu added this program.
 # He also added this comment -- the delay loop is very sensitive to where the return statement is place relative to the nested loops. To change delay change number of interations of loops
