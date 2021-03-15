@@ -24,7 +24,7 @@ app = Flask(__name__)
 #@app.route('/index')
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return 'test' ## render_template('index.html')
     # return render_template(index.html, "Successful" if success else "Failed")
     # if request.form["submit"] == "submit":
     #     name = request.form['name']
